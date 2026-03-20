@@ -4,50 +4,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTRATION FORM</title>
+    <title>Registration Form - Department of Computing and Informatics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+        }
 
-    <UL>
-        <LI><A href="INDEX.HTML">About our Department</A></LI>
-        <LI><A href="LINKS PAGE.html">Links</A></LI>
-        <LI><A href="LISTPAGE.HTML">List</A></LI>
-        <LI><A href="PROFILE PAGE.HTML">Profile</A></LI>
-        <LI><A href="REGISTRATION FORM.html">Registration form</A></LI>
-        <LI><A href="TIMETABLE.html">Timetable</A></LI>
-        <LI><A href="HOME.HTML">HOME PAGE</A></LI>
-    </UL>
+        .registration-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .registration-card .card-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 1.5rem;
+            border: none;
+        }
+
+        .form-label {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #250696;
+            box-shadow: 0 0 0 3px rgba(37, 6, 150, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd;
+        }
+
+        .form-check-input:checked {
+            background-color: #250696;
+            border-color: #250696;
+        }
+
+        .form-check-input:focus {
+            box-shadow: 0 0 0 3px rgba(37, 6, 150, 0.2);
+        }
+
+        .gender-label {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            border: none;
+            padding: 0.875rem 2.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 6, 150, 0.3);
+            background: linear-gradient(135deg, #1a0530 0%, #250696 100%);
+        }
+
+        .input-icon {
+            position: relative;
+        }
+
+        .input-icon i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #250696;
+        }
+
+        .input-icon .form-control {
+            padding-left: 2.75rem;
+        }
+
+        .required-field::after {
+            content: " *";
+            color: #dc3545;
+        }
+
+        .info-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #250696;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-box i {
+            color: #250696;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
 
 <body>
-    <h1> BUGEMA UNIVERSITY DEPARTMENT OF COMPUTING AND INFORMATICS </h1>
-    <h1> STUDENT REGISTRATION FORM </h1>
-    <form action="">
-        <p>
-            <label for="name"></label>
-            <input type="text" name="StudentName" id="name" placeholder="full name">
-        </p>
-        <label for="phoneNumber"> </label>
-        <input type="text" name="studentPhoneNumber" id="phoneNumber" placeholder="phone number">
-        <P>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="INDEX.HTML">
+                <img src="log.jpeg" alt="BUGEMA UNIVERSITY LOGO" width="50" height="50"
+                    class="me-2 circular-frame-white">Bugema University
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="INDEX.HTML">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">
+                            <i class="fas fa-graduation-cap me-1"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LINKS PAGE.html">
+                            <i class="fas fa-link me-1"></i> Links
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ALUMNI PAGE.HTML">
+                            <i class="fas fa-user-graduate me-1"></i> Alumni
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="REGISTRATION FORM.html">
+                            <i class="fas fa-edit me-1"></i> Registration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TIMETABLE.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Timetable
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        </P>
-        <p>
-            <label for="email"></label>
-            <input type="email" name="studentEmail" id="email" placeholder="your email">
-        </p>
-        <p>
-            <input type="radio" name="studentGender" id="gender">
-            <label for="gender">M</label>
-        </p>
-        <p>
-            <input type="radio" name="studentGender" id="gender">
-            <label for="gender">F</label>
-        </p>
-        <p>
-            <button type="submit">Submit</button>
-        </p>
-    </form>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="mb-2"><i class="fas fa-user-graduate me-3"></i>BUGEMA UNIVERSITY</h1>
+            <h2 class="mb-0"><i class="fas fa-user-edit me-2"></i>DEPARTMENT OF COMPUTING AND INFORMATICS</h2>
+            <p class="mt-2 mb-0">STUDENT REGISTRATION FORM</p>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="registration-card">
+                        <div class="card-header d-flex align-items-center justify-content-center">
+                            <i class="fas fa-clipboard-list me-2"></i>
+                            <h5 class="mb-0">New Student Registration</h5>
+                        </div>
+                        <div class="card-body p-4">
+                            <!-- Information Box -->
+                            <div class="info-box">
+                                <i class="fas fa-info-circle"></i>
+                                <strong>Please fill in all required fields marked with (*)</strong>
+                            </div>
 
+                            <form action="" method="post">
+                                <!-- Full Name -->
+                                <div class="mb-4">
+                                    <label for="name" class="form-label required-field">
+                                        <i class="fas fa-user me-1"></i>Full Name
+                                    </label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-id-card"></i>
+                                        <input type="text" class="form-control" name="StudentName" id="name"
+                                            placeholder="Enter your full name" required>
+                                    </div>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="mb-4">
+                                    <label for="phoneNumber" class="form-label required-field">
+                                        <i class="fas fa-phone me-1"></i>Phone Number
+                                    </label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <input type="tel" class="form-control" name="studentPhoneNumber"
+                                            id="phoneNumber" placeholder="Enter your phone number" required>
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="mb-4">
+                                    <label for="email" class="form-label required-field">
+                                        <i class="fas fa-envelope me-1"></i>Email Address
+                                    </label>
+                                    <div class="input-icon">
+                                        <i class="fas fa-at"></i>
+                                        <input type="email" class="form-control" name="studentEmail" id="email"
+                                            placeholder="Enter your email address" required>
+                                    </div>
+                                </div>
+
+                                <!-- Gender -->
+                                <div class="mb-4">
+                                    <span class="gender-label">
+                                        <i class="fas fa-venus-mars me-1"></i>Gender
+                                    </span>
+                                    <div class="d-flex gap-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="studentGender"
+                                                id="genderMale" value="male">
+                                            <label class="form-check-label" for="genderMale">
+                                                <i class="fas fa-male me-1"></i>Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="studentGender"
+                                                id="genderFemale" value="female">
+                                            <label class="form-check-label" for="genderFemale">
+                                                <i class="fas fa-female me-1"></i>Female
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="text-center mt-5">
+                                    <button type="submit" class="btn btn-primary btn-submit">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Registration
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0"><i class="fas fa-university me-2"></i>Bugema University - Department of Computing and
+                Informatics</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
-
 
 </html>
