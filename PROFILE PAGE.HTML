@@ -4,25 +4,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFILE PAGE</title>
-    <UL>
-        <LI><A href="INDEX.HTML">About Department</A></LI>
-        <LI><A href="LINKS PAGE.html">Links</A></LI>
-        <LI><A href="LISTPAGE.HTML">List</A></LI>
-        <LI><A href="PROFILE PAGE.HTML">Profile</A></LI>
-        <LI><A href="REGISTRATION FORM.html">Registration form</A></LI>
-        <LI><A href="TIMETABLE.html">Timetable</A></LI>
-        <LI><A href="HOME.HTML">HOME PAGE</A></LI>
-    </UL>
+    <title>Student Profile - Department of Computing and Informatics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: -125px auto 1rem;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #250696;
+        }
+
+        .info-card h5 {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            color: #250696;
+            width: 25px;
+        }
+
+        .bio-text {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                padding: 2rem 0;
+            }
+
+            .profile-img-container {
+                width: 150px;
+                height: 150px;
+                margin: -75px auto 1rem;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-card {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
 
 <body>
+    <!-- Navigation -->
+    <header class="navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="HOME.HTML">
+                    <img src="log.jpeg" alt="BUGEMA UNIVERSITY LOGO" width="60" height="60" class="me-2">
+                    <span class="d-none d-md-block">DEPARTMENT OF COMPUTING AND INFORMATICS</span>
+                    <span class="d-md-none">DCI</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="HOME.HTML"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="INDEX.HTML"><i class="fas fa-building"></i>
+                                Department</a></li>
+                        <li class="nav-item"><a class="nav-link" href="LINKS PAGE.html"><i class="fas fa-link"></i>
+                                Links</a></li>
+                        <li class="nav-item"><a class="nav-link" href="LISTPAGE.HTML"><i class="fas fa-list"></i>
+                                List</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="PROFILE PAGE.HTML"><i
+                                    class="fas fa-user"></i> Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="REGISTRATION FORM.html"><i
+                                    class="fas fa-edit"></i> Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="TIMETABLE.html"><i class="fas fa-calendar"></i>
+                                Timetable</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <img src="PERSIONAL.JPG" alt=" library image">
-    <h2> SEMPEREZA ABUDHALA </h2>
-    <P> A student at bugema university pursuing
-        a bachelors degree of Information technology</P>
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold">Student Profile</h1>
+                    <p class="lead">Department of Computing and Informatics</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Main Content -->
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Profile Card -->
 
+                <div class="profile-card">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <div class="profile-img-container">
+                                <img src="PERS.jpg" alt="Student Profile Picture" class="profile-img">
+                            </div>
+                        </div>
+                        <div class="col-12 px-4 pb-4">
+                            <div class="text-center mb-4">
+                                <h2 class="fw-bold text-primary mb-1">SEMPEREZA ABUDHALA</h2>
+                                <p class="text-muted mb-0">Bachelor of Science in Information Technology</p>
+                                <span class="badge bg-primary mt-2">Year 3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Information Cards -->
+                <div class="row">
+                    <!-- Personal Information -->
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-user-graduate"></i> Academic Information</h5>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap info-icon"></i>
+                                <div>
+                                    <strong>Program:</strong><br>
+                                    <span>Bachelor of Science in Information Technology</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-university info-icon"></i>
+                                <div>
+                                    <strong>University:</strong><br>
+                                    <span>Bugema University</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-building info-icon"></i>
+                                <div>
+                                    <strong>Department:</strong><br>
+                                    <span>Computing and Informatics</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-alt info-icon"></i>
+                                <div>
+                                    <strong>Year of Study:</strong><br>
+                                    <span>Year 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-address-card"></i> Contact Information</h5>
+                            <div class="info-item">
+                                <i class="fas fa-envelope info-icon"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    <span>abudhala.sempereza@bugemauniv.ac.ug</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone info-icon"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    <span>+256 700 000 000</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt info-icon"></i>
+                                <div>
+                                    <strong>Location:</strong><br>
+                                    <span>Kampala, Uganda</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-id-card info-icon"></i>
+                                <div>
+                                    <strong>Student ID:</strong><br>
+                                    <span>BU/2023/IT/001</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Section -->
+                <div class="info-card">
+                    <h5><i class="fas fa-user"></i> About Me</h5>
+                    <p class="bio-text mb-0">
+                        I am a dedicated student at Bugema University pursuing a Bachelor's degree in Information
+                        Technology.
+                        Passionate about technology and innovation, I am eager to apply my knowledge in solving
+                        real-world problems.
+                        I am committed to academic excellence and continuous learning in the field of computing and
+                        informatics.
+                    </p>
+                </div>
+
+                <!-- Skills & Interests -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-code"></i> Technical Skills</h5>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary">HTML/CSS</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Database</span>
+                                <span class="badge bg-secondary">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-heart"></i> Interests</h5>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary">Web Development</span>
+                                <span class="badge bg-secondary">Cybersecurity</span>
+                                <span class="badge bg-secondary">AI & Machine Learning</span>
+                                <span class="badge bg-secondary">Mobile Apps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-4" style="background: #250696; color: white;">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Department of Computing and Informatics | Bugema University</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/vh1+pyRH8RRHJ9 LucyR7Ubt4mvb6mkP2ZjzC2S7Xmu6nBJS2z9b3J7mKx1PZ8S6b"
+        crossorigin="anonymous"></script>
+</body>
 
 </html>
