@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni - Department of Computing and Informatics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .alumni-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .alumni-img-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: -125px auto 1rem;
+        }
+
+        .alumni-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .alumni-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #250696;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card h5 {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            color: #250696;
+            width: 25px;
+        }
+
+        .bio-text {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .alumni-stat {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            border-radius: 15px;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .alumni-stat h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .alumni-stat p {
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .alumni-header {
+                padding: 2rem 0;
+            }
+
+            .alumni-img-container {
+                width: 150px;
+                height: 150px;
+                margin: -75px auto 1rem;
+            }
+
+            .alumni-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .info-card {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="INDEX.HTML">
+                    <img src="log.jpeg" alt="BUGEMA UNIVERSITY LOGO" width="60" height="60"
+                        class="me-2 circular-frame-white">
+                    <span class="d-none d-md-block">DEPARTMENT OF COMPUTING AND INFORMATICS</span>
+                    <span class="d-md-none">DCI</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="INDEX.HTML"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="About.html"><i class="fas fa-graduation-cap"></i>
+                                About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
+                                Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="LINKS PAGE.html"><i class="fas fa-link"></i>
+                                Links</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ALUMNI PAGE.HTML"><i
+                                    class="fas fa-user-graduate"></i> Alumni</a></li>
+                        <li class="nav-item"><a class="nav-link" href="REGISTRATION FORM.html"><i
+                                    class="fas fa-edit"></i> Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="TIMETABLE.html"><i class="fas fa-calendar"></i>
+                                Timetable</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Alumni Header -->
+    <div class="alumni-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold">Our Alumni</h1>
+                    <p class="lead">Department of Computing and Informatics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Alumni Statistics -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="alumni-stat">
+                            <h2>500+</h2>
+                            <p>Total Alumni</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="alumni-stat">
+                            <h2>95%</h2>
+                            <p>Employment Rate</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="alumni-stat">
+                            <h2>50+</h2>
+                            <p>Partner Companies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Alumni Card -->
+                <div class="alumni-card">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <div class="alumni-img-container">
+                                <img src="PERS.jpg" alt="Alumni Profile Picture" class="alumni-img">
+                            </div>
+                        </div>
+                        <div class="col-12 px-4 pb-4">
+                            <div class="text-center mb-4">
+                                <h2 class="fw-bold text-primary mb-1">SEMPEREZA ABUDHALA</h2>
+                                <p class="text-muted mb-0">Bachelor of Science in Information Technology</p>
+                                <span class="badge bg-primary mt-2">Class of 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Information Cards -->
+                <div class="row">
+                    <!-- Professional Information -->
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-briefcase"></i> Professional Information</h5>
+                            <div class="info-item">
+                                <i class="fas fa-building info-icon"></i>
+                                <div>
+                                    <strong>Company:</strong><br>
+                                    <span>Tech Solutions Uganda</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-user-tie info-icon"></i>
+                                <div>
+                                    <strong>Position:</strong><br>
+                                    <span>Software Developer</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt info-icon"></i>
+                                <div>
+                                    <strong>Location:</strong><br>
+                                    <span>Kampala, Uganda</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-address-card"></i> Contact Information</h5>
+                            <div class="info-item">
+                                <i class="fas fa-envelope info-icon"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:abudhala.sempereza@bugemauniv.ac.ug"
+                                        class="contact-link">abudhala.sempereza@bugemauniv.ac.ug</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone info-icon"></i>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    <a href="tel:+256700000000" class="contact-link">+256 700 000 000</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-id-card info-icon"></i>
+                                <div>
+                                    <strong>Alumni ID:</strong><br>
+                                    <span>BU/2023/IT/001</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Section -->
+                <div class="info-card">
+                    <h5><i class="fas fa-user"></i> Alumni Story</h5>
+                    <p class="bio-text mb-0">
+                        I am a proud alumnus of Bugema University, having completed my Bachelor's degree in Information
+                        Technology.
+                        The department provided me with strong foundational skills and practical experience that helped
+                        me succeed in my career.
+                        Currently, I work as a Software Developer at Tech Solutions Uganda, where I develop innovative
+                        solutions for clients across East Africa.
+                        I remain connected with the department through the alumni network and often mentor current
+                        students.
+                    </p>
+                </div>
+
+                <!-- Skills & Achievements -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-code"></i> Technical Skills</h5>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary">HTML/CSS</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Database</span>
+                                <span class="badge bg-secondary">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-card">
+                            <h5><i class="fas fa-trophy"></i> Achievements</h5>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary">Best Student Award 2023</span>
+                                <span class="badge bg-secondary">Hackathon Winner</span>
+                                <span class="badge bg-secondary">Published Researcher</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- List Link -->
+                <div class="info-card text-center">
+                    <h5><i class="fas fa-users"></i> Connect with Other Alumni</h5>
+                    <p class="mb-3">View the complete list of our alumni and stay connected with your peers.</p>
+                    <a href="LISTPAGE.HTML" class="btn btn-primary">
+                        <i class="fas fa-list me-2"></i> View Alumni List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-4" style="background: #250696; color: white;">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Department of Computing and Informatics | Bugema University</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/vh1+pyRH8RRHJ9 LucyR7Ubt4mvb6mkP2ZjzC2S7Xmu6nBJS2z9b3J7mKx1PZ8S6b"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
