@@ -2,9 +2,27 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f7fa;
+    background-image: url('DEPARTMENT.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #1d1b1b;
     line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Overlay to ensure content readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* Navbar Custom Styles */
