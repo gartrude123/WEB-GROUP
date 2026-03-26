@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Department - Department of Computing and Informatics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .hod-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            padding-top: 20px;
+        }
+
+        .hod-image-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 0 auto 1.5rem;
+            z-index: 10;
+        }
+
+        .hod-image {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: contain;
+            background: white;
+            border: 6px solid white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hod-content {
+            padding: 1rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .hod-title {
+            color: #250696;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.25rem;
+        }
+
+        .hod-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-card h3 {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h5 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-text p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8edff 100%);
+            border-left: 4px solid #250696;
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 1.5rem;
+        }
+
+        .mission-box h4 {
+            color: #250696;
+            margin-bottom: 0.75rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 1.5rem 0;
+            }
+
+            .hod-card {
+                padding-top: 15px;
+            }
+
+            .hod-image-container {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto 1rem;
+            }
+
+            .hod-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .hod-name {
+                font-size: 1.25rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature-icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="INDEX.HTML">
+                    <img src="log.jpeg" alt="BUGEMA UNIVERSITY LOGO" width="80" height="80"
+                        class="me-2 circular-frame-white">
+                    <span class="d-none d-md-block">DEPARTMENT OF COMPUTING AND INFORMATICS</span>
+                    <span class="d-md-none">DCI</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="INDEX.HTML"><i class="fas fa-home"></i>
+                                Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="About.html"><i class="fas fa-graduation-cap"></i>
+                                About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
+                                Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ALUMNI PAGE.HTML"><i
+                                    class="fas fa-user-graduate"></i>
+                                Alumni</a></li>
+                        <li class="nav-item"><a class="nav-link" href="TIMETABLE.html"><i class="fas fa-calendar"></i>
+                                Timetable</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="lead">Bugema University - Department of Computing and Informatics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- HOD Card with Circular Image -->
+                <div class="hod-card">
+                    <div class="hod-content">
+                        <div class="hod-image-container">
+                            <img src="HOD.png" alt="Head of Department" class="hod-image circular-frame">
+                        </div>
+                        <p class="hod-title">Head of Department</p>
+                        <h2 class="hod-name">Mr. Ssewankambo EMA</h2>
+                    </div>
+                </div>
+
+                <!-- Welcome Section -->
+                <div class="content-card">
+                    <h3><i class="fas fa-university"></i> Welcome to the Department</h3>
+                    <p class="lead" style="color: #555; line-height: 1.8;">
+                        Welcome to the Department of Computing and Informatics at Bugema University.
+                        We are one of the leading departments in the School of Computing and Informatics,
+                        committed to providing quality education and research opportunities.
+                    </p>
+                    <p style="color: #555; line-height: 1.8;">
+                        Our department offers a range of courses at certificate, diploma, and degree levels,
+                        including Information Technology, Computer Science, and Software Engineering.
+                        We also provide short courses in web development, data analysis, and digital marketing, among
+                        others.
+                    </p>
+
+                    <div class="mission-box">
+                        <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                        <p style="margin-bottom: 0; color: #555;">
+                            The department is committed to providing quality education and research opportunities
+                            for its students and staff. This can be achieved through a combination of efforts
+                            by both students and staff working together toward excellence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Programs Offered -->
+                <div class="content-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Programs Offered</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Information Technology</h5>
+                                    <p>Bachelor's degree in IT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Computer Science</h5>
+                                    <p>Bachelor's degree in CS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Software Engineering</h5>
+                                    <p>Bachelor's degree in SE</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h5>Certificate Programs</h5>
+                                    <p>Short courses & certifications</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Short Courses -->
+                <div class="content-card">
+                    <h3><i class="fas fa-lightbulb"></i> Short Courses</h3>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-globe"></i> Web Development</span>
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-chart-bar"></i> Data Analysis</span>
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-bullhorn"></i> Digital Marketing</span>
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-shield-alt"></i> Cybersecurity</span>
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-mobile-alt"></i> Mobile App
+                            Development</span>
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-database"></i> Database
+                            Management</span>
+                        <span class="badge bg-primary p-3 fs-6"><i class="fas fa-database"></i> CISCO Courses</span>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="stats-section">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Students</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <div class="stat-number">25+</div>
+                                <div class="stat-label">Lecturers</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-4" style="background: #250696; color: white;">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Department of Computing and Informatics | Bugema University</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/vh1+pyRH8RRHJ9 LucyR7Ubt4mvb6mkP2ZjzC2S7Xmu6nBJS2z9b3J7mKx1PZ8S6b"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

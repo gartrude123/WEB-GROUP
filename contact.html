@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Department of Computing and Informatics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h3 {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .contact-info-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon i {
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .contact-text h5 {
+            color: #250696;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-text p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .contact-link {
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #250696;
+            text-decoration: underline;
+        }
+
+        .form-label {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #250696;
+            box-shadow: 0 0 0 3px rgba(37, 6, 150, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: #adb5bd;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            border: none;
+            padding: 0.875rem 2.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 6, 150, 0.3);
+            background: linear-gradient(135deg, #1a0530 0%, #250696 100%);
+        }
+
+        .recipient-select {
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 0.75rem 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .recipient-select:focus {
+            border-color: #250696;
+            box-shadow: 0 0 0 3px rgba(37, 6, 150, 0.1);
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="INDEX.HTML">
+                <img src="log.jpeg" alt="BUGEMA UNIVERSITY LOGO" width="50" height="50"
+                    class="me-2 circular-frame-white">Bugema University
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="INDEX.HTML">
+                            <i class="fas fa-home me-1"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">
+                            <i class="fas fa-graduation-cap me-1"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LINKS PAGE.html">
+                            <i class="fas fa-link me-1"></i> Links
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ALUMNI PAGE.HTML">
+                            <i class="fas fa-user-graduate me-1"></i> Alumni
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="REGISTRATION FORM.html">
+                            <i class="fas fa-edit me-1"></i> Registration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TIMETABLE.html">
+                            <i class="fas fa-calendar-alt me-1"></i> Timetable
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container text-center">
+            <h1 class="mb-2"><i class="fas fa-envelope me-3"></i>CONTACT US</h1>
+            <h2 class="mb-0">DEPARTMENT OF COMPUTING AND INFORMATICS</h2>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-lg-5 mb-4">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-address-book me-2"></i>Contact Information</h3>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Location</h5>
+                                <p>Bugema University, Luwero, Uganda</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Phone</h5>
+                                <p>
+                                    <a href="tel:+256788622619" class="contact-link"><i
+                                            class="fas fa-phone me-1"></i>+256 788622619</a>
+                                    <span class="mx-2">|</span>
+                                    <a href="https://wa.me/256788622619" class="contact-link" target="_blank"><i
+                                            class="fab fa-whatsapp me-1"></i>WhatsApp</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Email</h5>
+                                <p><a href="mailto:issewankambo@bugemauniv.ac.ug"
+                                        class="contact-link">issewankambo@bugemauniv.ac.ug</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Office Hours</h5>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+
+                        <!-- Links Section -->
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Quick Links</h5>
+                                <p><a href="LINKS PAGE.html" class="contact-link">View Useful Links <i
+                                            class="fas fa-arrow-right ms-1"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7 mb-4">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-paper-plane me-2"></i>Send us a Message</h3>
+
+                        <form action="" method="post">
+                            <!-- Your Name -->
+                            <div class="mb-3">
+                                <label for="senderName" class="form-label">
+                                    <i class="fas fa-user me-1"></i>Your Name
+                                </label>
+                                <input type="text" class="form-control" id="senderName" name="senderName"
+                                    placeholder="Enter your name" required>
+                            </div>
+
+                            <!-- Your Email -->
+                            <div class="mb-3">
+                                <label for="senderEmail" class="form-label">
+                                    <i class="fas fa-envelope me-1"></i>Your Email
+                                </label>
+                                <input type="email" class="form-control" id="senderEmail" name="senderEmail"
+                                    placeholder="Enter your email address" required>
+                            </div>
+
+                            <!-- Recipient -->
+                            <div class="mb-3">
+                                <label for="recipient" class="form-label">
+                                    <i class="fas fa-user-tie me-1"></i>Send To
+                                </label>
+                                <select class="recipient-select" id="recipient" name="recipient" required>
+                                    <option value="" disabled selected>Select recipient...</option>
+                                    <option value="department_head">Department Head</option>
+                                    <option value="library_manager">Library Manager</option>
+                                    <option value="library_assistant">Library Assistant</option>
+                                    <option value="receptionist">Receptionist</option>
+                                    <option value="academic_advisor">Academic Advisor</option>
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="mb-4">
+                                <label for="message" class="form-label">
+                                    <i class="fas fa-comment me-1"></i>Message
+                                </label>
+                                <textarea class="form-control" id="message" name="message" rows="5"
+                                    placeholder="Enter your message..." required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary btn-submit">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0"><i class="fas fa-university me-2"></i>Bugema University - Department of Computing and
+                Informatics</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

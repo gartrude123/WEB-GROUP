@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists - Department of Computing and Informatics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #250696 0%, #3a12b8 100%);
+            color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-card h3 {
+            color: #250696;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .favorites-list,
+        .dislikes-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .favorites-list li,
+        .dislikes-list li {
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.75rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .favorites-list li {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d1ebfe 100%);
+            border-left: 4px solid #250696;
+        }
+
+        .favorites-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(37, 6, 150, 0.15);
+        }
+
+        .dislikes-list li {
+            background: linear-gradient(135deg, #fef3e6 0%, #fde4cc 100%);
+            border-left: 4px solid #e67e22;
+        }
+
+        .dislikes-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.15);
+        }
+
+        .list-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .favorites-list .list-icon {
+            background: #250696;
+            color: white;
+        }
+
+        .dislikes-list .list-icon {
+            background: #e67e22;
+            color: white;
+        }
+
+        .list-number {
+            background: #250696;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 1.5rem 0;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            .favorites-list li,
+            .dislikes-list li {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="INDEX.HTML">
+                    <img src="log.jpeg" alt="BUGEMA UNIVERSITY LOGO" width="60" height="60"
+                        class="me-2 circular-frame-white">
+                    <span class="d-none d-md-block">DEPARTMENT OF COMPUTING AND INFORMATICS</span>
+                    <span class="d-md-none">DCI</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="INDEX.HTML"><i class="fas fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="About.html"><i class="fas fa-graduation-cap"></i>
+                                About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>
+                                Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="LINKS PAGE.html"><i class="fas fa-link"></i>
+                                Links</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ALUMNI PAGE.HTML"><i
+                                    class="fas fa-user-graduate"></i>
+                                Alumni</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="LISTPAGE.HTML"><i class="fas fa-list"></i>
+                                List</a></li>
+                        <li class="nav-item"><a class="nav-link" href="REGISTRATION FORM.html"><i
+                                    class="fas fa-edit"></i> Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="TIMETABLE.html"><i class="fas fa-calendar"></i>
+                                Timetable</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold">Current alumni</h1>
+                    <h2 class="lead">leadership 2024/2025</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Favorite Things -->
+                <div class="content-card">
+                    <h3><i class="fas fa-heart"></i> 3 top leaders</h3>
+                    <ul class="favorites-list">
+                        <li>
+                            <span class="list-number">1</span>
+                            <span>Mugweri Junior</span>
+                            <span>President</span>
+                        </li>
+                        <li>
+                            <span class="list-number">2</span>
+                            <span>Kyiyimba Joshua</span>
+                            <span>Vice President</span>
+                        </li>
+                        <li>
+                            <span class="list-number">3</span>
+                            <span>Bwambale Georeen</span>
+                            <span> General Secretary</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Dislikes -->
+                <div class="content-card">
+                    <h3><i class="fas fa-times-circle"></i> Other leaders</h3>
+                    <ul class="dislikes-list">
+                        <li>
+                            <span>Uwenamara Sayson</span>
+                            <span>Treasurer</span>
+                        </li>
+                        <li>
+                            <span>Mwenje David</span>
+                            <span>Publicity Secretary</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Alumni Link -->
+                <div class="content-card">
+                    <h3><i class="fas fa-user-graduate"></i> Connect with Alumni</h3>
+                    <p>View our alumni profiles and stay connected with fellow graduates.</p>
+                    <a href="ALUMNI PAGE.HTML" class="btn btn-primary mt-2">
+                        <i class="fas fa-user-graduate me-2"></i> View Alumni
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-4" style="background: #250696; color: white;">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Department of Computing and Informatics | Bugema University</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/vh1+pyRH8RRHJ9 LucyR7Ubt4mvb6mkP2ZjzC2S7Xmu6nBJS2z9b3J7mKx1PZ8S6b"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
